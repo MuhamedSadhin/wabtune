@@ -1,0 +1,20 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient (top-right to bottom-left, rotated 45°) -->
+    <linearGradient id="pink-cyan-gradient" x1="100%" y1="0%" x2="0%" y2="100%" gradientTransform="rotate(45 0.5 0.5)">
+      <stop offset="0%" stop-color="rgb(244 114 182 / 0.4)" />  <!-- pink-400/40 -->
+      <stop offset="100%" stop-color="rgb(34 211 238 / 0.4)" /> <!-- cyan-400/40 -->
+    </linearGradient>
+    <!-- Blur filter (subtler than the previous example) -->
+    <filter id="soft-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" />  <!-- softer blur for smaller size -->
+    </filter>
+  </defs>
+  
+  <!-- Rotated gradient circle -->
+  <circle 
+    cx="128" cy="128" r="100"  
+    fill="url(#pink-cyan-gradient)" 
+    filter="url(#soft-blur)"
+  />
+</svg>

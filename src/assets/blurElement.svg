@@ -1,0 +1,20 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient definition (top-left to bottom-right) -->
+  <defs>
+    <radialGradient id="gradient-blob" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="rgb(168 85 247 / 0.3)" />  <!-- purple-500/30 -->
+      <stop offset="100%" stop-color="rgb(79 70 229 / 0.2)" />  <!-- indigo-500/20 -->
+    </radialGradient>
+    <!-- Heavy blur filter -->
+    <filter id="blur-effect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40" />  <!-- blur-2xl equivalent -->
+    </filter>
+  </defs>
+  
+  <!-- Glowing sphere -->
+  <circle 
+    cx="200" cy="200" r="150" 
+    fill="url(#gradient-blob)" 
+    filter="url(#blur-effect)"
+  />
+</svg>

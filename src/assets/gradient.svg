@@ -1,0 +1,24 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+  <defs>
+    <radialGradient id="blurredGradientLarge" cx="50%" cy="50%" r="75%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#67e8f9" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6b21a8" />
+    </radialGradient>
+
+    <!-- EXPANDED FILTER BOUNDS -->
+    <filter id="blurFilterLarge" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="120" />
+    </filter>
+  </defs>
+
+  <!-- CENTERED CIRCLE WITH BLUR -->
+  <circle
+    cx="600"
+    cy="600"
+    r="480"
+    fill="url(#blurredGradientLarge)"
+    fill-opacity="0.4"
+    filter="url(#blurFilterLarge)"
+  />
+</svg>
